@@ -7,12 +7,8 @@ Lets play a game of hangman!
 import random
 
 LEXICON_FILE = "Lexicon.txt"    # File to read word list from
-INITIAL_GUESSES = 8             # Initial number of guesses player starts with
 
 def play_game(secret_word):
-    """
-    Add your code (remember to delete the "pass" below)
-    """
     guesses = ''
     turns = 8 # how many guesses we get 
     print("Lets play a game of hangman! ") #intro
@@ -34,11 +30,11 @@ def play_game(secret_word):
         #ask for user input after the hangman _ has been displayed
         guess = input("Type a single letter here, then press enter: ").upper()
         guesses += guess
-        if len(guess) == 1 and guess.isalpha(): #make sure the user is only entering 1 character
+        if len(guess) == 1 and guess.isalpha(): #make sure the user is only entering 1 alpha character
             if guess not in secret_word:
                 turns -= 1
                 print("There are no ",guess,"'s in the word")
-                print("You have", + turns, 'more guesses')
+                print("You have", + turns, 'guesses left')
             if turns == 0:
                 print("Sorry, you lost. The secret word was", secret_word)
         else:
