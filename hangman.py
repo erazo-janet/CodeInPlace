@@ -15,7 +15,7 @@ def play_game(secret_word):
     """
     guesses = ''
     turns = 8 # how many guesses we get 
-    print("The world now looks like this: ") #intro
+    print("Lets play a game of hangman! ") #intro
     print("you have ",turns,"guesses left") 
     while turns > 0:
         failed = 0
